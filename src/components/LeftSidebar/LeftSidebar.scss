@@ -1,0 +1,38 @@
+.left-sidebar.active{
+    left: 0;
+}
+.left-sidebar{
+    width: 316px;
+    height: 100vh;
+    padding: 100px 0 0 50px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: -316px;
+    transition: .4s;
+
+    &__close{
+        position: absolute;
+        top: 75px;
+        right: 50px;
+    }
+
+    &__title{
+        margin: 150px 0 0 0;
+    }
+
+    &__number{
+        margin: 20px 0 0 0;
+        font-weight: 700;
+    }
+
+    &__text{
+        width: 100px;
+        margin: 50px 0 0 0;
+    }
+
+    a{
+        display: block;
+        margin: 200px 0 0 50px;
+    }
+}
