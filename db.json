@@ -1,0 +1,46 @@
+{
+    "sweets": [
+        {
+            "id": "1",
+            "sweet": "Rainbow donut",
+            "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+            "price": "$1.99",
+            "img": "../../assets/sweet-one.png"
+        },
+        {
+            "id": "2",
+            "sweet": "Berry cake",
+            "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+            "price": "$10.59",
+            "img": "../../assets/sweet-two.png"
+        },
+        {
+            "id": "3",
+            "sweet": "Rainbow donut",
+            "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+            "price": "$1.99",
+            "img": "../../assets/sweet-one.png"
+        },
+        {
+            "id": "4",
+            "sweet": "Rainbow donut",
+            "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+            "price": "$1.99",
+            "img": "../../assets/sweet-one.png"
+        },
+        {
+            "id": "5",
+            "sweet": "Berry cake",
+            "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+            "price": "$10.59",
+            "img": "../../assets/sweet-two.png"
+        },
+        {
+            "id": "6",
+            "sweet": "Rainbow donut",
+            "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+            "price": "$1.99",
+            "img": "../../assets/sweet-one.png"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+.content{
+    width: 825px;
+    margin: 100px auto;
+
+    &__title{
+        text-align: center;
+    }
+
+    &__wrapper{
+        margin: 50px 0 0 0;
+        display: grid;
+        grid-template-columns: 257px 257px 257px;
+        grid-gap: 20px 40px;
+
+    }
+}

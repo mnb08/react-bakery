@@ -1,0 +1,36 @@
+.sweet{
+    width: 257px;
+    height: 445px;
+    padding: 10px;
+
+    &__name{
+        font-size: 18px;
+        color: #303E3D;
+        font-weight: 700;
+        margin: 10px 0 0 0;
+    }
+
+    &__ingr{
+        font-size: 14px;
+        color: #303E3D;
+        margin: 10px 0 0 0;
+    }
+
+    &__price{
+        font-size: 18px;
+        color: #303E3D;
+        font-weight: 700;
+        margin: 10px 0 0 0;
+    }
+
+    &__btn{
+        width: 100%;
+        height: 33px;
+        border: none;
+        margin: 25px 0 0 0;
+        background: #8E4575;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
