@@ -1,6 +1,7 @@
 import React from 'react'
 import './Sweet.scss'
 
+import { ThemeContext } from '../../App'
 import onePreview from '../../assets/sweet-one.png'
 import twoPreview from '../../assets/sweet-two.png'
 
@@ -13,10 +14,12 @@ const getImages = (text) => {
 }
 
 export const Sweet = ({sweet, ingr, preview, price}) => {
+    const theme = React.useContext(ThemeContext)
     const filteredPrice = Number(price.split('$')[1])
     const realPreview = getImages(preview)
 
-    console.log(preview)
+
+    console.log(theme)
     return (
         <div className='sweet'>
             <div className='sweet__preview'>
@@ -25,7 +28,7 @@ export const Sweet = ({sweet, ingr, preview, price}) => {
             <div className='sweet__name'>{sweet}</div>
             <div className='sweet__ingr'>{ingr}</div>
             <div className='sweet__price'>$ {filteredPrice}</div>
-            <button className='sweet__btn'>Add to cart</button>
+            <button style={+{ background: theme.background }} className='sweet__btn'>Add to cart</button>
         </div>
     )
 }
