@@ -14,21 +14,23 @@ const getImages = (text) => {
 }
 
 export const Sweet = ({sweet, ingr, preview, price}) => {
-    const theme = React.useContext(ThemeContext)
+    
     const filteredPrice = Number(price.split('$')[1])
     const realPreview = getImages(preview)
 
+    const drawBorder = () => {
+        return {border: '5px solid black'}
+    }
 
-    console.log(theme)
     return (
-        <div className='sweet'>
+        <div style={drawBorder()} className='sweet'>
             <div className='sweet__preview'>
                 <img src={realPreview}/>
             </div>
             <div className='sweet__name'>{sweet}</div>
             <div className='sweet__ingr'>{ingr}</div>
             <div className='sweet__price'>$ {filteredPrice}</div>
-            <button style={+{ background: theme.background }} className='sweet__btn'>Add to cart</button>
+            <button className='sweet__btn'>Add to cart</button>
         </div>
     )
 }

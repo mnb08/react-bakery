@@ -14,11 +14,16 @@ const themes = {
 	}
   };
 
-export const ThemeContext = React.createContext(themes.light)
+export const ThemeContext = React.createContext(themes)
 
 function App() {
+	const [theme, setTheme] = React.useState(themes.dark)
+
+	const setDarkTheme = () => setTheme(themes.dark)
+	const setLightTheme = () => setTheme(themes.light)
+
   return (
-	<ThemeContext.Provider value={themes.dark}>
+	<ThemeContext.Provider value={{theme, setDarkTheme, setLightTheme}}>
 		<div className="app">
 			<Header />
 			<Content />

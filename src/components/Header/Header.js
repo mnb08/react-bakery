@@ -21,6 +21,7 @@ export const Header = () => {
             <div className='header__basket'>
                 <img src={basket} />
                 <span>15</span>
+                
             </div>
         </div>
         <LeftSidebar setIsClicked={setIsClicked} isClicked={isClicked} />
