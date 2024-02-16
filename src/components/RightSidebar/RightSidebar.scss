@@ -1,0 +1,44 @@
+.rightSidebar{
+    &.active{
+        right: 0;
+    }
+
+
+    width: 316px;
+    height: 100vh;
+    padding: 100px 0 0 50px;
+    background: #8E4575;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: -316px;
+    transition: .4s;
+
+
+    &__close{
+        position: absolute;
+        cursor: pointer;
+        left: 45px;
+        top: 75px;
+    }
+
+    &__carts{
+        margin: 20px 0 0 0;
+    }
+
+    &__line{
+        width: 250px;
+        height: 1px;
+        background: white;
+    }
+
+    &__total-price{
+        width: 250px;
+        margin: 10px 0 0 0;
+        color: white;
+        font-size: 18px;
+        font-weight: 700; 
+        display: flex;
+        justify-content: space-between;
+    }
+}

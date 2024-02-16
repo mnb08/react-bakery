@@ -2,7 +2,7 @@ import React from 'react'
 import './LeftSidebar.scss'
 import closeIcon from '../../assets/closeIcon.png'
 
-export const LeftSidebar = ({setIsClicked, isClicked}) => {
+export const LeftSidebar = ( {setIsClicked, isClicked} ) => {
   return (
         <div className={`left-sidebar ${isClicked ? 'active' : ''}`}>
             <div
