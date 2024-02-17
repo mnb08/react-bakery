@@ -3,32 +3,30 @@ import React from 'react'
 import { Content } from "./components/Content";
 import { Header } from "./components/Header/Header";
 
-const themes = {
-	light: {
-	  foreground: "#000000",
-	  background: "#eeeeee"
-	},
-	dark: {
-	  foreground: "#ffffff",
-	  background: "#222222"
-	}
+const data = {
+	carts: [
+
+	]
   };
 
-export const ThemeContext = React.createContext(themes)
+export const DataContext = React.createContext(data)
 
 function App() {
-	const [theme, setTheme] = React.useState(themes.dark)
+	const [carts, setCarts] = React.useState(data.carts)
 
-	const setDarkTheme = () => setTheme(themes.dark)
-	const setLightTheme = () => setTheme(themes.light)
-
+	console.log(carts)
+	const addItemToCart = (obj) => {
+		if(!obj) return
+		setCarts([obj, ...carts])
+	}
+	
   return (
-	<ThemeContext.Provider value={{theme, setDarkTheme, setLightTheme}}>
+	<DataContext.Provider value={{addItemToCart, carts}}>
 		<div className="app">
 			<Header />
 			<Content />
 		</div>
-	</ThemeContext.Provider>
+	</DataContext.Provider>
   );
 }
 

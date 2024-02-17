@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Sweet.scss'
 
-import { ThemeContext } from '../../App'
+import { DataContext } from '../../App'
 import onePreview from '../../assets/sweet-one.png'
 import twoPreview from '../../assets/sweet-two.png'
 
@@ -13,24 +13,28 @@ const getImages = (text) => {
 	}
 }
 
-export const Sweet = ({sweet, ingr, preview, price}) => {
-    
+export const Sweet = ({id,sweet, ingr, preview, price, amount}) => {
+    const { addItemToCart } = useContext(DataContext)
+    // console.log(context)
     const filteredPrice = Number(price.split('$')[1])
     const realPreview = getImages(preview)
 
-    const drawBorder = () => {
-        return {border: '5px solid black'}
+    const addItem = () => {
+        addItemToCart({id,name: sweet, price, amount})
     }
 
     return (
-        <div style={drawBorder()} className='sweet'>
+        <div className='sweet'>
             <div className='sweet__preview'>
                 <img src={realPreview}/>
             </div>
             <div className='sweet__name'>{sweet}</div>
             <div className='sweet__ingr'>{ingr}</div>
             <div className='sweet__price'>$ {filteredPrice}</div>
-            <button className='sweet__btn'>Add to cart</button>
+            <button
+                onClick={ () => addItem()} 
+                className='sweet__btn'
+            >Add to cart</button>
         </div>
     )
 }

@@ -1,18 +1,20 @@
 .rightSidebar{
     &.active{
         right: 0;
+        visibility: visible;
     }
 
-
+    position: fixed;
     width: 316px;
     height: 100vh;
     padding: 100px 0 0 50px;
     background: #8E4575;
     z-index: 5;
-    position: absolute;
+    // position: absolute;
     top: 0;
     right: -316px;
     transition: .4s;
+    visibility: hidden;
 
 
     &__close{
