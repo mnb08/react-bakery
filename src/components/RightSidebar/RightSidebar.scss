@@ -32,6 +32,9 @@
         width: 250px;
         height: 1px;
         background: white;
+        &.false{
+            display: none;
+        }
     }
 
     &__total-price{
@@ -42,5 +45,8 @@
         font-weight: 700; 
         display: flex;
         justify-content: space-between;
+        &.false{
+            display: none;
+        }
     }
 }

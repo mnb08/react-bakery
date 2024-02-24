@@ -1,29 +1,24 @@
 import React from 'react'
 import { Sweet } from '../Sweet'
 import './Content.scss'
-import axios from '../../axios.js'
+import { DataContext } from '../../App.js'
 
 export const Content = () => {
 
-	const  [data, setData] = React.useState([])
+	const  { sweets, getSweet } = React.useContext(DataContext)
 
-	React.useEffect( () => {
-		const getSweets = async() => {
-			const response = await axios.get('/sweets')
-			setData(response.data)
-		}
-
-		getSweets()
-	}, [])
-
+	// React.useEffect( () => {
+	// 	console.log(sweets.length, 'sweet content')
+	// 	getSweet()
+	// }, [])
 
 	return (
 		<div className='content'>
 			<h1 className='content__title'>Avaliable sweets</h1>
 			<div className='content__wrapper'>
 				{
-					data.length == 0 ? '<h1>Данных нету!!!</h1>' : 
-					data.map( sweet => (
+					sweets.length == 0 ? <h1>Данных нету!!!</h1> : 
+					sweets.map( sweet => (
 						<Sweet key={sweet.id} id={sweet.id} sweet={sweet.sweet} amount={sweet.amount} ingr={sweet.ingredients} price={sweet.price} preview={sweet.img} />
 					))
 				}
