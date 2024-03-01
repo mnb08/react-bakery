@@ -6,7 +6,7 @@
       "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
       "img": "../../assets/sweet-one.png",
       "price": "$1.99",
-      "amount": -11
+      "amount": 2
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
       "img": "../../assets/sweet-two.png",
       "price": "$10.59",
-      "amount": -5
+      "amount": 0
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
       "img": "../../assets/sweet-one.png",
       "price": "$1.99",
-      "amount": -25
+      "amount": 25
     },
     {
       "id": "4",

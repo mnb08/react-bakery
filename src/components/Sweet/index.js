@@ -4,6 +4,7 @@ import './Sweet.scss'
 import { DataContext } from '../../App'
 import onePreview from '../../assets/sweet-one.png'
 import twoPreview from '../../assets/sweet-two.png'
+import { BakeryContext } from '../../BakeryContext'
 
 const getImages = (text) => {
     if(!text) return
@@ -20,7 +21,7 @@ const getCartObj = (obj) => {
 }
 
 export const Sweet = ({id,sweet, ingr, preview, price, amount}) => {
-    const { addItemToCart, updateAndGetSweet } = useContext(DataContext)
+    const { updateAndGetSweets } = useContext(BakeryContext)
     
     const [isClicked, setIsClicked] = React.useState(1)
 
@@ -31,9 +32,10 @@ export const Sweet = ({id,sweet, ingr, preview, price, amount}) => {
         if(isClicked == 1) return 
         
         const cartObj = getCartObj({id,sweet, price})
-        addItemToCart(cartObj)
+        // addItemToCart(cartObj)
         const sweetObj = {id,sweet, ingredients: ingr, img: preview, price, amount: amount-1}
-        updateAndGetSweet(id, sweetObj)
+        console.log(sweetObj)
+        updateAndGetSweets(id, sweetObj)
         
 
     }, [isClicked])
@@ -50,10 +52,14 @@ export const Sweet = ({id,sweet, ingr, preview, price, amount}) => {
             <div className='sweet__name'>{sweet}</div>
             <div className='sweet__ingr'>{ingr}</div>
             <div className='sweet__price'>$ {filteredPrice}</div>
-            <button
-                onClick={ () => clickHandler()} 
-                className='sweet__btn'
-            >Add to cart {amount}</button>
+            {
+                amount === 0 ? <button className='sweet__btn zero'>Not avalible</button> : 
+                <button
+                    onClick={ () => clickHandler()} 
+                    className='sweet__btn'
+                >Add to cart {amount}</button>
+            }
+            
         </div>
     )
 }

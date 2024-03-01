@@ -6,10 +6,8 @@ import burger from '../../assets/burger.png'
 import basket from '../../assets/basket.png'
 import { LeftSidebar } from '../LeftSidebar'
 import { RightSidebar } from '../RightSidebar'
-import { DataContext } from '../../App'
 
 export const Header = () => {
-    const {carts} = React.useContext(DataContext)
 
   const [isClickedLeft, setIsClickedLeft] = React.useState(false)
   const [isClickedRight, setIsClickedRight] = React.useState(false)
@@ -20,7 +18,8 @@ export const Header = () => {
             <div onClick={() => setIsClickedLeft(true)} className='header__burger'>
                 <img src={burger} />
             </div>
-            <div className='header__logo'>
+            <div 
+                className='header__logo'>
                 <img src={logo} />
             </div>
             <div 
@@ -28,7 +27,7 @@ export const Header = () => {
                 onClick={ () => setIsClickedRight(true)}
             >
                 <img src={basket} />
-                <span>{carts.length}</span>
+                <span>{[0,1,2,3].length}</span>
                 
             </div>
         </div>

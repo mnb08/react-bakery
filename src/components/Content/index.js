@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Sweet } from '../Sweet'
 import './Content.scss'
-import { DataContext } from '../../App.js'
+import { BakeryContext } from '../../BakeryContext'
 
 export const Content = () => {
+	const { getSweets, sweets } = React.useContext(BakeryContext)
 
-	const  { sweets, getSweet } = React.useContext(DataContext)
+	React.useEffect( () => {
+		getSweets()
+		console.log(sweets)
 
-	// React.useEffect( () => {
-	// 	console.log(sweets.length, 'sweet content')
-	// 	getSweet()
-	// }, [])
+	}, [])
 
 	return (
 		<div className='content'>

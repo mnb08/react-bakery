@@ -32,5 +32,9 @@
         color: white;
         font-weight: 700;
         cursor: pointer;
+        &.zero{
+            background: #919294;
+            cursor: default;
+        }
     }
 }

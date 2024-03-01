@@ -3,6 +3,7 @@ import React from 'react'
 import { Content } from "./components/Content";
 import { Header } from "./components/Header/Header";
 import axios from './axios';
+import { BakeryProvider } from './BakeryContext';
 
 const data = {
 	sweets: [],
@@ -30,31 +31,14 @@ const data = {
 			 
 			setCarts(typedArrays(carts))
 		}
-		
-		const updateAndGetSweet = async(id, obj) => {
-			const response = await axios.put(`/sweets/${id}`, obj)
-			if(response.status === 200){
-				const sweets = await axios.get('/sweets')
-				setSweets(sweets.data)
-			}
-		}
-
-		const getSweets = async() => {
-			const response = await axios.get('/sweets')
-			setSweets(response.data)
-		}
-		
-		React.useEffect( () => {
-			getSweets()
-		}, [])
 
   return (
-	<DataContext.Provider value={{getSweets, addItemToCart, sweets, setSweets, carts, updateAndGetSweet}}>
-		<div className="app">
-			<Header />
-			<Content />
-		</div>
-	</DataContext.Provider>
+		<BakeryProvider>
+			<div className="app">
+				<Header />
+				<Content />
+			</div>
+		</BakeryProvider>
   );
 }
 
