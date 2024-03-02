@@ -1,0 +1,141 @@
+.asweets{
+    margin: 79px auto;
+    width: 826px;
+
+    &__cont{
+        display: flex;
+        // width: 825px;
+        gap: 8px;
+        flex-direction: column;
+    }
+    &__avaliable{
+        margin-bottom: 28px;
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 28px;
+    }
+    &__item{
+        background-color: #F7F8FC;
+        border:1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 35px;
+    }
+    &__name{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    &__quantity{
+        display: flex;
+        gap: 14px;
+    }
+    &__stock{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    &__img{
+        width: 100px;
+    }
+    &__minus, &__plus{
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+    &__minus{
+        margin-left: 3px;
+    }
+    &__bin{
+        width: 14px;
+        height: 18px;
+        cursor: pointer;
+    }
+    &__add{
+        width: 257px;
+        background-color: #8E4575;
+        border: none;
+        height: 56px;
+        color: white;
+        margin: 36px auto;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    &__edit{
+        cursor: pointer;
+    }
+    &__editname{
+        width: 202px;
+        height: 30px;
+        font-size: 18px;
+    }
+    &__editdit{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        img{
+            cursor: pointer;
+        }
+    }
+    &__addmod{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    &__modcont{
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        padding-top: 55px;
+        width: 468px;
+        height: 540px;
+        background-color: #F7F8FC;
+        
+    }
+    &__modflex{
+        width: 344px;
+        input{
+            height: 30px;
+            width: 344px;
+            margin-bottom: 14px;
+            padding: 6px 10px;
+            border: 1px solid #E4E4E4;
+            border-radius: 0px;
+            outline-color: #dedede;
+            // outline-style: solid;
+            // outline-width: 1px;
+        }
+        input::placeholder{
+            color: #919294;
+            font-size: 16px;
+        }
+    }
+    &__modtext{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__addbutton{
+        width: 100%;
+        
+    }
+}
+@media screen and (max-width: 835px) {
+    .asweets{
+        width: 550px;
+        margin: 79px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__cont{
+            width: 625px;
+        }
+    } 
+}

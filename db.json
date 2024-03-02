@@ -1,0 +1,61 @@
+{
+  "sweets": [
+    {
+      "id": "1",
+      "sweet": "Rainbow donuts",
+      "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+      "img": "../../assets/sweet-one.png",
+      "price": 1.99,
+      "quantity": 0
+    },
+    {
+      "id": "2",
+      "sweet": "Berry cake",
+      "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+      "img": "../../assets/sweet-two.png",
+      "price": 10.59,
+      "quantity": 894
+    },
+    {
+      "id": "3",
+      "sweet": "Muffins",
+      "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+      "img": "../../assets/sweet-muffins.png",
+      "price": 1.99,
+      "quantity": 975
+    },
+    {
+      "id": "4",
+      "sweet": "Cheesecakes",
+      "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+      "img": "../../assets/sweet-cheesecakes.png",
+      "price": 1.99,
+      "quantity": 990
+    },
+    {
+      "id": "5",
+      "sweet": "Cookies",
+      "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+      "img": "../../assets/sweet-cookies.png",
+      "price": 10.59,
+      "quantity": 1006
+    },
+    {
+      "id": "6",
+      "sweet": "Brownies",
+      "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
+      "img": "../../assets/sweet-brownies.png",
+      "price": 1.99,
+      "quantity": 1014
+    },
+    {
+      "id": "7",
+      "sweet": "Barny",
+      "ingredients": "wheat flour, sugar, e.g. glucose-fruit, egg, rapeseed oil, skimmed milk powder and whole milk powder, humectant (glycerin), palm oil, dextrose, cocoa powder, raising agents (sodium dihydrogen pyrophosphate and sodium bicarbonate), table salt , emulsifiers",
+      "img": "",
+      "price": 0.45,
+      "quantity": 300
+    }
+  ],
+  "cart": []
+}
