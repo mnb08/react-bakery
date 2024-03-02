@@ -21,7 +21,7 @@ export const Admin = () => {
     }, [])
     React.useEffect(() => {
         if (isPosted == false) return
-        const sweetObj = { id: JSON.stringify(Date.now()), sweet: nameRef.current.value, ingredients: ingrRef.current.value, img: '', price: Number(priceRef.current.value), quantity: Number(stockRef.current.value) }
+        const sweetObj = { id: JSON.stringify(Date.now()), sweet: nameRef.current.value, ingredients: ingrRef.current.value, img: imgRef.current.value, price: Number(priceRef.current.value), quantity: Number(stockRef.current.value) }
         addAnDGetSweet(sweetObj)
         setIsPosted(false)
         setIsClicked(false)

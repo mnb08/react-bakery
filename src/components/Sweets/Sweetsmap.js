@@ -8,22 +8,22 @@ import sweet6 from "../../assets/sweet-brownies.png";
 import { ThemeContext } from "../../App.js";
 import { BakeryContext } from "../../BakeryContext.js";
 
-const getImg = (text) => {
-    if (text.includes("one.png")) {
-        return sweet1;
-    }
-    else if (text.includes("muffins.png")) { return sweet3 }
-    else if (text.includes("cheesecakes.png")) { return sweet4 }
-    else if (text.includes("cookies.png")) { return sweet5 }
-    else if (text.includes("brownies.png")) { return sweet6 }
-    else {
-        return sweet2;
-    }
-};
+// const getImg = (text) => {
+//     if (text.includes("one.png")) {
+//         return sweet1;
+//     }
+//     else if (text.includes("muffins.png")) { return sweet3 }
+//     else if (text.includes("cheesecakes.png")) { return sweet4 }
+//     else if (text.includes("cookies.png")) { return sweet5 }
+//     else if (text.includes("brownies.png")) { return sweet6 }
+//     else {
+//         return sweet2;
+//     }
+// };
 
 export const Sweetsmap = ({ id, sweet, ingr, img, price, quantity, sweetTheme, item }) => {
     const { themes, isDark } = React.useContext(ThemeContext);
-    const realSweet = getImg(img);
+    // const realSweet = getImg(img);
     const [isClicked, setIsClicked] = React.useState(1)
     const sweetButtons = () => {
         if (isDark) { return (themes.forSweet.addButtons) }
@@ -51,7 +51,7 @@ export const Sweetsmap = ({ id, sweet, ingr, img, price, quantity, sweetTheme, i
 
     return (
         <div className="sweets__item" style={sweetTheme()} key={id}>
-            <img src={realSweet} className="sweets__img" />
+            <img src={img} className="sweets__img" />
             <div className="sweets__name">{sweet}</div>
             <div className="sweets__ingredients">{ingr}</div>
             <div className="sweets__price">${price}</div>

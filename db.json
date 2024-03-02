@@ -14,7 +14,7 @@
       "ingredients": "3 eggs, chocolate, sugar, almond milk, olive oil, flour",
       "img": "../../assets/sweet-two.png",
       "price": 10.59,
-      "quantity": 894
+      "quantity": 893
     },
     {
       "id": "3",
@@ -55,6 +55,14 @@
       "img": "",
       "price": 0.45,
       "quantity": 300
+    },
+    {
+      "id": "1709349758320",
+      "sweet": "Donut",
+      "ingredients": "nyam nyam",
+      "img": "https://www.google.com/search?q=%D0%BF%D0%BE%D0%BD%D1%87%D0%B8%D0%BA&sca_esv=38e1bbef5a15d06f&rlz=1C1NDCM_enKG1078KG1078&sxsrf=ACQVn08oKJSKPM8IKqJQyAu4aN4BSHKOaw:1709349721912&tbm=isch&source=iu&ictx=1&vet=1&fir=I8OR6VfO10szrM%252C7M_khqyY7FRJhM%252C%252Fm%252F0jy4k%253BoBsD5IOUFzs2UM%252C_kFAuuHOq331SM%252C_%253BavQcnaa9n-xOOM%252C5wMTESOB-pgsCM%252C_%253BYPrcORO2T1jhLM%252C_MZmYilzcT_D6M%252C_%253Bz5zjIMksn1l7yM%252CoxO4w4L1XYTFoM%252C_&usg=AI4_-kSBtz-LnoeAQ7c-9snXiHQBDh5Kdw&sa=X&ved=2ahUKEwjisOL3z9SEAxVBJxAIHb8QBHMQ_B16BAgXEAE#imgrc=I8OR6VfO10szrM",
+      "price": 1.99,
+      "quantity": 400
     }
   ],
   "cart": []
