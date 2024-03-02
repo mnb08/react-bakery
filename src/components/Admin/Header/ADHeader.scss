@@ -1,0 +1,39 @@
+// $family: unquote("MonteCarlo");
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+.header{
+    color: white;
+    height: 140px;
+    background: #171717;
+    background: #8E4575;
+    // background: ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    &__basket{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span{
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            display: block;
+            margin: 0 0 0 5px;
+        }
+    }
+    &__burger{
+        cursor: pointer;
+    }
+    &__logo{
+        font-family: "MonteCarlo";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 50px;
+    }
+    &__adminPage{
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+}
